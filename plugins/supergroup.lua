@@ -565,7 +565,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "⚙Group settings:⚙\n>>Lock links : "..settings.lock_link.."\n>>Lock flood: "..settings.flood.."\n>>Flood sensitivity : "..NUM_MSG_MAX.."\n>>Lock spam: "..settings.lock_spam.."\n>>Lock Arabic: "..settings.lock_arabic.."\n>>Lock Member: "..settings.lock_member.."\n>>Lock RTL: "..settings.lock_rtl.."\>>nLock Tgservice : "..settings.lock_tgservice.."\n>>Lock sticker: "..settings.lock_sticker.."\n>>Public: "..settings.public.."\n>>Strict settings: "..settings.strict.."\n___________________\nGroup model:normal\nBot version:1\nFor support join to @avast_Team"
   return text
 end
 
