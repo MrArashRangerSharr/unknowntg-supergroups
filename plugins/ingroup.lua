@@ -225,7 +225,7 @@ function show_group_settingsmod(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "⚙Group settings:⚙\n______________________\n»Lock group name : "..settings.lock_name.."\»nLock group photo : "..settings.lock_photo.."\n»Lock group member : "..settings.lock_member.."\n»Lock group leave : "..leave_ban.."\n»flood sensitivity : "..NUM_MSG_MAX.."\n»Bot protection : "..bots_protection.."\n»Lock links : "..settings.lock_link.."\n»Lock RTL: "..settings.lock_rtl.."\n»Lock sticker: "..settings.lock_sticker.."\n»Public: "..settings.public.."\n_____________________\nGroup model:SuperGroup\nBot version:1"
+  local text = "⚙Group settings:⚙\n______________________\n»Lock group name : "..settings.lock_name.."\»nLock group photo : "..settings.lock_photo.."\n»Lock group member : "..settings.lock_member.."\n»Lock group leave : "..leave_ban.."\n»flood sensitivity : "..NUM_MSG_MAX.."\n»Bot protection : "..bots_protection.."\n»Lock links : "..settings.lock_link.."\n»Lock RTL: "..settings.lock_rtl.."\n»Lock sticker: "..settings.lock_sticker.."\n»Public: "..settings.public.."\n»Lock persian/arabic chat : "..settings.lock.arabic.."\n_____________________\nGroup model:SuperGroup\nBot version:1"
   return text
 end
 
@@ -236,7 +236,7 @@ local function set_descriptionmod(msg, data, target, about)
   local data_cat = 'description'
   data[tostring(target)][data_cat] = about
   save_data(_config.moderation.data, data)
-  return 'Set group description to:\n'..about
+  return 'Set group description to:\n___________________\n'..about
 end
 local function get_description(msg, data)
   local data_cat = 'description'
@@ -1538,7 +1538,7 @@ if msg.to.type == 'chat' then
       local function callback (extra , success, result)
         local receiver = 'chat#'..msg.to.id
         if success == 0 then
-           return send_large_msg(receiver, '*Error: Invite link failed* \nReason: Not creator.')
+           return send_large_msg(receiver, '*Error: Bot is not creator of this group.')
         end
         send_large_msg(receiver, "Created a new link")
         data[tostring(msg.to.id)]['settings']['set_link'] = result
@@ -1557,7 +1557,7 @@ if msg.to.type == 'chat' then
         return "Create a link using /newlink first !"
       end
        savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-      return "Group link:\n"..group_link
+      return "Group link:\n_________________\n"..group_link
     end
     if matches[1] == 'setowner' and matches[2] then
       if not is_owner(msg) then
