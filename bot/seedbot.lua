@@ -466,7 +466,7 @@ ________________________________
 » Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
 » Only owner can use res,setowner,promote,demote and log commands
-
+>>Channel: @avast_Team
 ]],
 	help_text_super =[[
 >>SuperGroup Commands:
@@ -608,7 +608,7 @@ _____________________________________
 »Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
 
 »Only owner can use res, setowner, promote, demote, and log commands
-
+Channel: @avast_Team
 ]],
   }
   serialize_to_file(config, './data/config.lua')
