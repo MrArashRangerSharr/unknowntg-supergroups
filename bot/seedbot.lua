@@ -237,7 +237,7 @@ function create_config( )
     },
     sudo_users = {212990316},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Mega avast V1
+    about_text = [[avast-BOT (Mega Model) - http://bit.ly/1TdIHKc
 An advanced administration bot based on TG-CLI written in Lua
 
 avast team member's:
