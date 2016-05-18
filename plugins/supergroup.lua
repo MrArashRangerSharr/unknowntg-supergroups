@@ -566,7 +566,7 @@ end
 	end
   local settings = data[tostring(target)]['settings']
   local text = "⚙Group settings:⚙\n______________________\n>>Lock links : "..settings.lock_link.."\n>>Lock flood: "..settings.flood.."\n>>Flood sensitivity : "..NUM_MSG_MAX.."\n>>Lock spam: "..settings.lock_spam.."\n>>Lock Arabic: "..settings.lock_arabic.."\n>>Lock Member: "..settings.lock_member.."\n>>Lock RTL: "..settings.lock_rtl.."\n>>Lock Tgservice : "..settings.lock_tgservice.."\n>>Lock sticker: "..settings.lock_sticker.."\n>>Public: "..settings.public.."\n>>Strict settings: "..settings.strict.."\n___________________\nGroup model:SuperGroup\nBot version:8\nBot language: Eng\nAnitspam: ban\navast Bot @avast_Team\nIm The Best! (*_*)"
-  return text
+  return reply_msg(msg.id, text, ok_cb, false)
 end
 
 local function promote_admin(receiver, member_username, user_id)
@@ -1319,7 +1319,7 @@ local function run(msg, matches)
 				return "Create a link using /newlink first!\n\nOr if I am not creator use /setlink to set your link"
 			end
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group link ["..group_link.."]")
-			return ">>Group link:\n_____________________\n"..group_link
+			return ">>Group " ..string.gsub(msg.to.print_name, "_", " ").. " link:\n_____________________\n"..group_link
 		end
 
 		if matches[1] == "invite" and is_sudo(msg) then
