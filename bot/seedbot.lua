@@ -237,24 +237,17 @@ function create_config( )
     },
     sudo_users = {226726601},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Avast-BOT (Mega Model) - http://bit.ly/1TdIHKc
-An advanced administration bot based on TG-CLI written in Lua...!
+    about_text = [[Asimo-BOT (Mega Model)
+An advanced bot based on TG-CLI written in Lua...!
 
-avast team member's:
-@ArashAnonymous0101
-@Oo_sArDaR_marginam_oO
-@redteam_01_01
-@Pukeram
-@negative_officiall
-@DrCyber1736
-@sudo1
-@hacker_unknown
+Admins:
+Chief and sudo: @ArashRanger
+investor: @DrCyber1736
+Helper: @Pukeram
 
 channel:
-@Avast_CH
+@AsimoTeam
 
-website:
-http://avastteam.r98.ir
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -467,7 +460,7 @@ ____________________________
 » Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
 » Only owner can use res,setowner,promote,demote and log commands
->>Channel: @avast_Team
+>>Channel: @AsimoTeam
 ]],
 	help_text_super =[[
 >>SuperGroup Commands:
@@ -610,7 +603,7 @@ ____________________________
 
 »Only owner can use res, setowner, promote, demote, and log commands
 
-Join for updates news to @avast_Team
+Join for updates news to @AsimoTeam
 ]],
   }
   serialize_to_file(config, './data/config.lua')
